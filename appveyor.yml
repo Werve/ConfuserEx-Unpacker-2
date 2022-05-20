@@ -11,7 +11,7 @@ build_script:
 - cmd: >-
     appveyor-retry nuget restore "ConfuserEx Unpacker\ConfuserEx Unpacker.sln"
     
-    msbuild "ConfuserEx Unpacker\ConfuserEx Unpacker.sln" /p:Configuration=Release /m /verbosity:normal /p:WarningLevel=0 /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+    msbuild "ConfuserEx Unpacker\ConfuserEx Unpacker.sln" /p:Configuration=Release /m /unsafe /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 artifacts:
 - path: "ConfuserEx Unpacker\bin"
   name: ConfuserEx-Unpacker v%APPVEYOR_BUILD_VERSION%
