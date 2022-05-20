@@ -13,5 +13,5 @@ build_script:
     
     msbuild "ConfuserEx Unpacker\ConfuserEx Unpacker.sln" /p:Configuration=Release /m /p:AllowUnsafeBlocks=true /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 artifacts:
-- path: "ConfuserEx Unpacker\bin"
+- path: "ConfuserEx Unpacker/bin"
   name: ConfuserEx-Unpacker v%APPVEYOR_BUILD_VERSION%
